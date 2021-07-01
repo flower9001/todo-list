@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@700&family=Noto+Sans+TC:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="css/all.css">
+</head>
+
+<body>
+    <div class="container my-6">
+        <h1 class="fontEn mb-4">TODO LIST</h1>
+        <div class="d-inline fontTc fontTc-md position-relative">
+            <input type="text" class="text mb-3 ps-2 border-0 rounded-4" placeholder="新增待辦事項">
+            <a href="#" class="add top-50 end-0 bg-lightblue700 text-white position-absolute rounded-4"><i class="fas fa-plus"></i></a>
+        </div>
+        <div class="form my-0 mx-auto bg-white border border-1 border-white rounded-4">
+            <article class="filter fontTc fontTc-sm text-gray bg-lightblue600 border border-bottom-1 border-gray100 rounded-top-4">
+                <section class="totalList show position-relative w-33"><a href="#" class="d-block py-2 w-100">全部</a></section>
+                <section class="incomplete position-relative w-33"><a href="#" class="d-block py-2 w-100">進行中</a></section>
+                <section class="complete position-relative w-33"><a href="#" class="d-block py-2 w-100">已完成</a></section>
+            </article>
+            <ul class="list fontTc fontTc-md">
+            </ul>
+            <div class="formBottom fontTc fontTc-sm my-3">
+                <span class="dataNum ms-2 me-auto text-gray700"></span><a href="#" class="clear me-2">清除已完成項目</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/all.js"></script>
+</body>
+
+</html>
