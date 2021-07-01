@@ -1,0 +1,55 @@
+@each $spacer,
+$num in $spacers {
+    .m-#{$spacer} {
+        margin-top: $num;
+        margin-right: $num;
+        margin-bottom: $num;
+        margin-left: $num;
+    }
+    .mt-#{$spacer} {
+        margin-top: $num;
+    }
+    .me-#{$spacer} {
+        margin-right: $num;
+    }
+    .mb-#{$spacer} {
+        margin-bottom: $num;
+    }
+    .ms-#{$spacer} {
+        margin-left: $num;
+    }
+    .mx-#{$spacer} {
+        margin-left: $num;
+        margin-right: $num;
+    }
+    .my-#{$spacer} {
+        margin-top: $num;
+        margin-bottom: $num;
+    }
+    .p-#{$spacer} {
+        padding-top: $num;
+        padding-right: $num;
+        padding-bottom: $num;
+        padding-left: $num;
+    }
+    .pt-#{$spacer} {
+        padding-top: $num;
+    }
+    .pe-#{$spacer} {
+        padding-right: $num;
+    }
+    .pb-#{$spacer} {
+        padding-bottom: $num;
+    }
+    .ps-#{$spacer} {
+        padding-left: $num;
+    }
+    .px-#{$spacer} {
+        padding-left: $num;
+        padding-right: $num;
+    }
+    .py-#{$spacer} {
+        padding-top: $num;
+        padding-bottom: $num;
+    }
+}

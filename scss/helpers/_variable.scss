@@ -1,0 +1,66 @@
+$fz-sm: 14px;
+$fz-md: 16px;
+$fz-xl: 48px;
+
+$fontTitle: 'Baloo Tamma 2', cursive;
+$fontTc: 'Noto Sans TC', sans-serif;
+
+$spacer: 8px;
+$spacers: (
+    0: 0,
+    1: $spacer,
+    2: $spacer * 2,
+    3: $spacer * 3,
+    4: $spacer * 4,
+    5: $spacer * 5,
+    6: $spacer * 6,
+    auto: auto,
+);
+
+$position-values: (
+  0: 0,
+  33: 33.3333%,
+  50: 50%,
+  100: 100%
+);
+
+$white: #fff;
+$gray-100: lighten(gray, 40%);
+$gray-500: gray;
+$gray-700: darken(gray, 20%);
+$gray-800: darken(gray, 30%);
+
+$lightblue-500: lightblue;
+$lightblue-600: darken(lightblue, 10%);
+$lightblue-700: darken(lightblue, 20%);
+$lightblue-800: darken(lightblue, 30%);
+
+$theme-colors: (
+    "white": #fff,
+    
+    "gray100": lighten(gray, 40%),
+    "gray": gray,
+    "gray700": darken(gray, 20%),
+    "gray800": darken(gray, 30%),
+    "lightblue": lightblue,
+
+    "lightblue600": darken(lightblue, 10%),
+    "lightblue700": darken(lightblue, 20%),
+    "lightblue800": darken(lightblue, 30%),
+);
+
+$displays: (
+  "none": none,
+  "inline": inline,
+  "block": block,
+  "flex": flex,
+);
+
+$border: (
+  0: 0,
+  1: 1px,
+  2: 2px,
+  3: 3px,
+  4: 4px,
+  5: 5px,
+);

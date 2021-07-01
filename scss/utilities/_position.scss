@@ -1,0 +1,25 @@
+@each $position, $value in $position-values{
+    .top-#{$position} {
+        top: $value;
+    }
+    .end-#{$position} {
+        right: $value;
+    }
+    .bottom-#{$position} {
+        bottom: $value;
+    }
+    .start-#{$position} {
+        left: $value;
+    }
+    .w-#{$position} {
+        width: $value;
+    }
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-relative {
+    position: relative;
+}

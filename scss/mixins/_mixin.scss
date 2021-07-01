@@ -1,0 +1,15 @@
+@mixin mobile {
+    @media (max-width: 576px) {
+        @content
+    }
+};
+
+@mixin icon-sm {
+    height: 16px;
+    width: 16px;
+};
+
+@mixin icon-xl {
+    height: 40px;
+    width: 40px;
+}
