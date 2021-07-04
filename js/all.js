@@ -17,6 +17,11 @@ if (data.length == 0) {
     form.classList.add("d-none");
 };
 
+// text process
+function textProcess(text){
+    return text.replace(/</g, '&lt');
+}
+
 function nowTab() {
     if (totalList.getAttribute("class").includes("show")) {
         init();
@@ -47,9 +52,11 @@ function init() {
 
     data.forEach(function(item, index) {
         if (item.complete == "yes") {
-            str += `<li><a href="#" class="check text-info mx-2"><i class="fas fa-check fa-fw text-lightblue700" data-check="check" data-num="${index}"></i></a><span class="text-gray800"><s class="text-gray">${item.name}</s></span><a href="#" class="delete me-2" data-num="${index}"><i class="fas fa-trash-alt" data-delete="delete"></i></a></li>`;
+            content = textProcess(item.name);
+            str += `<li><a href="#" class="check text-info mx-2"><i class="fas fa-check fa-fw text-lightblue700" data-check="check" data-num="${index}"></i></a><span class="text-gray800"><s class="text-gray">${content}</s></span><a href="#" class="delete me-2" data-num="${index}"><i class="fas fa-trash-alt" data-delete="delete"></i></a></li>`;
         } else {
-            str += `<li><a href="#" class="check text-gray mx-2"><i class="far fa-square fa-fw" data-check="check" data-num="${index}"></i></a><span class="text-gray800">${item.name}</span><a href="#" class="delete me-2" data-num="${index}"><i class="fas fa-trash-alt" data-delete="delete"></i></a></li>`;
+            content = textProcess(item.name);
+            str += `<li><a href="#" class="check text-gray mx-2"><i class="far fa-square fa-fw" data-check="check" data-num="${index}"></i></a><span class="text-gray800">${content}</span><a href="#" class="delete me-2" data-num="${index}"><i class="fas fa-trash-alt" data-delete="delete"></i></a></li>`;
         }
     });
     incompleteDataNum();
@@ -63,7 +70,8 @@ function incompleteList() {
 
     data.forEach(function(item, index) {
         if (item.complete == "no") {
-            str += `<li><a href="#" class="check text-gray mx-2"><i class="far fa-square fa-fw" data-check="check" data-num="${index}"></i></a><span class="text-gray800">${item.name}</span><a href="#" class="delete me-2" data-num="${index}"><i class="fas fa-trash-alt" data-delete="delete"></i></a></li>`;
+            content = textProcess(item.name);
+            str += `<li><a href="#" class="check text-gray mx-2"><i class="far fa-square fa-fw" data-check="check" data-num="${index}"></i></a><span class="text-gray800">${content}</span><a href="#" class="delete me-2" data-num="${index}"><i class="fas fa-trash-alt" data-delete="delete"></i></a></li>`;
         }
     });
     incompleteDataNum();
@@ -76,7 +84,8 @@ function completeList() {
 
     data.forEach(function(item, index) {
         if (item.complete == "yes") {
-            str += `<li><a href="#" class="check text-info mx-2"><i class="fas fa-check fa-fw text-lightblue700" data-check="check" data-num="${index}"></i></a><span class="text-gray800"><s class="text-gray">${item.name}</s></span><a href="#" class="delete me-2" data-num="${index}"><i class="fas fa-trash-alt" data-delete="delete"></i></a></li>`;
+            content = textProcess(item.name);
+            str += `<li><a href="#" class="check text-info mx-2"><i class="fas fa-check fa-fw text-lightblue700" data-check="check" data-num="${index}"></i></a><span class="text-gray800"><s class="text-gray">${content}</s></span><a href="#" class="delete me-2" data-num="${index}"><i class="fas fa-trash-alt" data-delete="delete"></i></a></li>`;
         }
     });
     incompleteDataNum();
