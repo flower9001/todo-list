@@ -22,6 +22,7 @@ function textProcess(text){
     return text.replace(/</g, '&lt');
 }
 
+// now tab
 function nowTab() {
     if (totalList.getAttribute("class").includes("show")) {
         init();
