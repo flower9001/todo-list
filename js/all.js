@@ -18,7 +18,7 @@ if (data.length == 0) {
 };
 
 // text process
-function textProcess(text){
+function textProcess(text) {
     return text.replace(/</g, '&lt');
 }
 
@@ -155,6 +155,26 @@ add.addEventListener("click", function(e) {
     nowTab();
     text.value = "";
 });
+
+text.addEventListener("keydown", function(e) {
+    if (text.value == "") {
+        return;
+    }
+
+    let info = {
+        name: "",
+        complete: "no"
+    };
+
+    if (e.keyCode == 13) {
+        form.classList.remove("d-none");
+        info.name = text.value;
+        data.push(info);
+        nowTab();
+        text.value = "";
+    }
+
+})
 
 // filter
 filter.addEventListener("click", function(e) {
